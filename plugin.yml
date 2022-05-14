@@ -1,0 +1,19 @@
+main: me.simmi.MobsterHits.main
+name: MobsterHits
+version: '1.0'
+description: adds a hit system similar to bounties.
+author: lilsimmi
+prefix: MobsterHits
+api-version: 1.18
+
+commands:
+  hit:
+    description: Put a hit out on a player
+    usage: /<command> <player>
+    permission: hits.hit
+    permission-message: You do not have permission!
+permissions:
+  hits.hit:
+    description: allows /hit command
+    default: op
+    
