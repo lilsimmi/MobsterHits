@@ -20,12 +20,13 @@ public class main extends JavaPlugin implements Listener
 		+"Hits"+ChatColor.DARK_GRAY.toString()+ChatColor.BOLD.toString()+"> ";
 
 		World world = Bukkit.getWorld("world");
+		Player cmdsender = (Player) sender;
+
 		
 		if (label.equals("hit") && args.length == 1 && sender.hasPermission("hits.hit"))
 		{
 			String targetName = args[0];
 			Player target = Bukkit.getServer().getPlayer(targetName);
-			Player cmdsender = (Player) sender;
 			if (target != null)
 			{
 				world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
@@ -39,6 +40,10 @@ public class main extends JavaPlugin implements Listener
 	            cmdsender.sendMessage(prefix+ChatColor.RED+"Player not online");			
 			}
             
+		}
+		else if (label.equals("hit") && args.length == 0)
+		{
+            cmdsender.sendMessage(prefix+ChatColor.RED+"/hit <player>");			
 		}
 		
 		return true;
