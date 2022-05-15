@@ -30,20 +30,21 @@ public class main extends JavaPlugin implements Listener
 			if (target != null)
 			{
 				world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
-	            world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
-	            world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
-	            target.sendMessage(prefix+ChatColor.WHITE+"You've been hit by "+sender.getName().toString());	
-	        
+	            		world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
+	           		world.spawnEntity(target.getLocation(), EntityType.WITHER_SKELETON);
+	          	  	target.sendMessage(prefix+ChatColor.WHITE+"You've been hit by "+sender.getName().toString());	
+	        	
 			}
 			else 
 			{
-	            cmdsender.sendMessage(prefix+ChatColor.RED+"Player not online");			
+	            		
+				cmdsender.sendMessage(prefix+ChatColor.RED+"Player not online");			
 			}
             
 		}
 		else if (label.equals("hit") && args.length == 0)
 		{
-            cmdsender.sendMessage(prefix+ChatColor.RED+"/hit <player>");			
+            		cmdsender.sendMessage(prefix+ChatColor.RED+"/hit <player>");			
 		}
 		
 		return true;
