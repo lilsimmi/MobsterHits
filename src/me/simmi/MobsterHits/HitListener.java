@@ -82,10 +82,11 @@ public class HitListener implements Listener
         // If we got this far, we need to take money from the player
         // that got damaged, and send money to the player who called
         // the hit.
+        // It's stored in a `double` so it can store decimal places.
         // This gets the amount set in the config for "Cash per strike".
         // In the event there's no entry in the config for "Cash per strike",
         // it will instead return the default value we set in onEnable().
-        int amount = plugin.getConfig().getInt("Cash per strike");
+        double amount = plugin.getConfig().getDouble("Cash per strike");
         // The withdrawPlayer method returns some information about
         // whether or not the transaction was successful, so we store
         // that so we know how much money to award the player who
