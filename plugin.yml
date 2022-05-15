@@ -1,6 +1,6 @@
 main: me.simmi.MobsterHits.MobsterHits
 name: MobsterHits
-version: '1.0'
+version: '1.0.3'
 description: adds a hit system similar to bounties.
 author: lilsimmi
 prefix: MobsterHits
