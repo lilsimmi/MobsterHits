@@ -1,10 +1,15 @@
-main: me.simmi.MobsterHits.main
+main: me.simmi.MobsterHits.MobsterHits
 name: MobsterHits
 version: '1.0.3'
 description: adds a hit system similar to bounties.
 author: lilsimmi
 prefix: MobsterHits
 api-version: 1.18
+# Adding these lines tells Bukkit to make sure Vault loads
+# before MobsterHits does, but if Vault is not found,
+# that the plugin can continue running anyway.
+softdepend:
+- Vault
 
 commands:
   hit:
